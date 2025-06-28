@@ -541,7 +541,10 @@ a {
   padding: 40px 0px;
 }
 .footer .social-icon img {
-  margin-right: 20px;
+  margin-right: 16px;
+}
+.footer .social-icon a:hover {
+  opacity: 0.8;
 }
 .footer .row-bottom {
   display: flex;

@@ -23,7 +23,7 @@ body {
   overflow: hidden;
 }
 .content {
-  width: 1110px;
+  width: min(1110px,100%);
   max-width: calc(100% - 48px);
   margin-left: auto;
   margin-right: auto;
@@ -51,7 +51,11 @@ a {
   padding-top: 26px;
   position: sticky;
   top: -26px;
-  z-index: 1;
+  z-index: 100;
+}
+.toggle-menu svg {
+  width: 30px;
+  height: 30px;
 }
 .hero-wrap {
   position: relative;
@@ -94,7 +98,7 @@ a {
   font-style: normal;
   font-weight: 500;
 }
-
+/* hero */
 .hero-wrap .info {
   width: 51%;
 }
@@ -208,6 +212,7 @@ a {
 }
 .guides .guide-item {
   text-align: center;
+  flex: 1;
 }
 .guide-item:not(:last-child) {
   margin-right: 140px;
@@ -275,7 +280,8 @@ a {
   margin-left: 6px;
 }
 .featured .list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   gap: 30px;
   margin-top: 70px;
 }
